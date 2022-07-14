@@ -1,10 +1,13 @@
 import cv2
+import os
 import imutils
 import pytesseract
 
 pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files\Tesseract-OCR\\tesseract'
 
-path = r'D:\mini_project\semester 4\test2.jpg'
+
+#path = r'D:\mini_project\semester 4\backup\test2.jpg'
+path=input("Enter path: ")
 image = cv2.imread(path)
 image = imutils.resize(image, width=300 )
 cv2.imshow("original image", image)
